@@ -3,7 +3,7 @@
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="Description" content="Error page for when incorrect information is enterred while creating a new holiday"> <!-- description of the page-->
+        <meta name="Description" content="Error page for when incorrect information is entered while creating a new holiday"> <!-- description of the page-->
         <link href="style.css" rel="stylesheet"> <!--Uses CSS stylesheet for design-->
         <script src="responsive_menu.js"></script> <!--JScript hamburger menu for low width displays-->
         <title>Leading Choice Getaways - Holiday Added</title>
@@ -28,18 +28,21 @@
         <main>
             <section class="NoBottomMargin topSection"> <!--Section container for main content-->
                 <?php
+                /**
+                 * @var $dbConn mysqli
+                 */
                     // database_conn.php holds dbConn variable
                     include 'database_conn.php';
 
                     // Variables for DB, will set to null if not filled
-                    $holidayTitle = isset($_REQUEST['holidayTitle']) ? $_REQUEST['holidayTitle'] : null;
-                    $holidayDescription = isset($_REQUEST['holidayDescription']) ? $_REQUEST['holidayDescription'] : null;
-                    $holidayDuration = isset($_REQUEST['holidayDuration']) ? $_REQUEST['holidayDuration'] : null;
-                    $locationID = isset($_REQUEST['locationID']) ? $_REQUEST['locationID'] : null;
-                    $catID = isset($_REQUEST['catID']) ? $_REQUEST['catID'] : null;
-                    $holidayPrice = isset($_REQUEST['holidayPrice']) ? $_REQUEST['holidayPrice'] : null;
+                    $holidayTitle = $_REQUEST['holidayTitle'] ?? null;
+                    $holidayDescription = $_REQUEST['holidayDescription'] ?? null;
+                    $holidayDuration = $_REQUEST['holidayDuration'] ?? null;
+                    $locationID = $_REQUEST['locationID'] ?? null;
+                    $catID = $_REQUEST['catID'] ?? null;
+                    $holidayPrice = $_REQUEST['holidayPrice'] ?? null;
 
-                    // Validation for empty fieldsm, presents error
+                    // Validation for empty fields, presents error
                     if (empty($holidayTitle)||empty($holidayDescription)||empty($holidayDuration)||empty($locationID)||empty($catID)||empty($holidayPrice)){
                         echo "<h2>Error: Empty Fields</h2>";
                         echo "<p>All fields should be completed.</p>";
@@ -85,7 +88,7 @@
                         } else {
 
                         $retrieveCatDesc = "SELECT catDesc FROM LCG_category\n"
-                                         . "WHERE LCG_category.catID = '$catID'"; // If query was successful, find the category description, location name, and country from the newest holidayID (the one just enterred)
+                                         . "WHERE LCG_category.catID = '$catID'"; // If query was successful, find the category description, location name, and country from the newest holidayID (the one just entered)
                         
                                         $success = $dbConn->query($retrieveCatDesc); // See if SQL retrieval from cat table was successful, reuses variable from insert query
                         
@@ -109,16 +112,16 @@
                             $rowLocationObj = $success2->fetch_object(); // Fetches row from location table
                             $costPerDay = number_format((($holidayPrice)/($holidayDuration)), 2); //Calculates cost per day by doing holidayPrice/holidayDuration and formats to 2 decimal places
                             echo "<section class='holiday flexChild'>\n
-                                  <h3 class='holidayTitle'>{$holidayTitle}</h3>\n
+                                  <h3 class='holidayTitle'>$holidayTitle</h3>\n
                                   <div class='imgAndDesc'>\n
-                                  <img class='leftFloatingImage' src=Images/flags/{$rowLocationObj->country}.png alt='An icon of the {$rowLocationObj->country} flag.'>\n 
-                                  <p class='holidayDescription'>{$holidayDescription}</p>\n
+                                  <img class='leftFloatingImage' src=Images/flags/$rowLocationObj->country.png alt='An icon of the $rowLocationObj->country flag.'>\n 
+                                  <p class='holidayDescription'>$holidayDescription</p>\n
                                   </div>\n
-                                  <p class='holidayDuration'><b>Duration:</b> {$holidayDuration} Days</p>\n
-                                  <p class='holidayPrice'><b>Price:</b> £{$holidayPrice}</p>\n
-                                  <p class='costPerDay'><b>Cost per day:</b> £{$costPerDay}</p>\n
-                                  <p class='catDesc'><b>Category:</b> {$rowCatObj->catDesc}</p>\n
-                                  <p class='locationName'><b>Location:</b> {$rowLocationObj->locationName}, {$rowLocationObj->country}</p>\n
+                                  <p class='holidayDuration'><b>Duration:</b> $holidayDuration Days</p>\n
+                                  <p class='holidayPrice'><b>Price:</b> £$holidayPrice</p>\n
+                                  <p class='costPerDay'><b>Cost per day:</b> £$costPerDay</p>\n
+                                  <p class='catDesc'><b>Category:</b> $rowCatObj->catDesc</p>\n
+                                  <p class='locationName'><b>Location:</b> $rowLocationObj->locationName, $rowLocationObj->country</p>\n
                                   </section>\n";
                                 
                             $success->close(); // Closes queries and connection
