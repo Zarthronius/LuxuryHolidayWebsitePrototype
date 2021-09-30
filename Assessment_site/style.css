@@ -26,7 +26,7 @@ section, aside {
     background-color: #FFFFFF;
 }
 
-.flexChild, fieldset, legend { /* For displaying holidays and the admin page fieldsets*/
+.flexChild, fieldset, legend { /* For displaying holidays and the admin page field sets*/
     border-color: #061A40;
     background-color: #B9D6F2;
     color: #061A40;
@@ -93,7 +93,7 @@ nav ul li a {
 /*Burger menu IDs*/
 #ham_menu {
     float: none;
-    padding: 0px 5px;
+    padding: 0 5px;
     margin-bottom: 5px;
 	display: inline-block;
 }
@@ -111,16 +111,16 @@ nav ul li a {
 
 body {
     font-family: sans-serif;
-    margin: 0px;
+    margin: 0;
 }
 
 section {
-    margin: 10px 0px;
+    margin: 10px 0;
 }
 
 aside {
     margin-top: 10px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 section, aside {    
@@ -146,7 +146,7 @@ footer {
 }
 
 footer p{
-    margin: 0px;
+    margin: 0;
 }
 
 section img {
@@ -154,7 +154,7 @@ section img {
 }
 
 aside section{
-    border-radius: 0%;
+    border-radius: 0;
     border-bottom-style: dashed;
 }
 
@@ -162,7 +162,7 @@ aside section{
 .flexParent {
     display: flex;
     flex-direction: column;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .flexChild {
@@ -171,7 +171,7 @@ aside section{
 }
 
 .navbar-image img{
-    margin: 0px;
+    margin: 0;
 }
 
 .blockImg {
@@ -179,22 +179,22 @@ aside section{
     width: 100%;
     float: none;
     display: block;
-    margin: 0px;
+    margin: 0;
     border-radius: 10px;
 }
 
 .leftFloatingImage {
     height: 128px;
     width: 128px;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .topSection {
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .holidayDescription {
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .imgAndDesc { /*Class for flag icons and text*/
@@ -210,7 +210,7 @@ form {
 fieldset {
     font-size: 20px;
     border-radius: 10px;
-    margin: 15px 0px;
+    margin: 15px 0;
     box-sizing: border-box; /*Allows max width to be the same as submit button (accounts for padding/border)*/
     min-width: auto;
 }
@@ -259,12 +259,12 @@ input, select {
 }
 
 input[name="catID"] {
-    margin: 5px 0px;
+    margin: 5px 0;
 }
 
 input[type="submit"] {
-    margin: 10px 0px;
-    padding: 10px 0px;
+    margin: 10px 0;
+    padding: 10px 0;
     font-weight: bold;
 }
 
@@ -278,8 +278,8 @@ input[type="submit"] {
 }
 
 .radioLabel {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 .radioRow {
@@ -348,7 +348,7 @@ p a {
     }
 
     body {
-        margin: 0%;
+        margin: 0;
     }
 
     main {
@@ -358,7 +358,7 @@ p a {
     aside {
         grid-area: aside;
         padding: 5px;
-        margin: 0px 0px 0px 10px;
+        margin: 0 0 0 10px;
         border-top-left-radius: 10px;
     }
 
@@ -367,8 +367,8 @@ p a {
     }
     
     section {
-        margin-left: 0px;
-        margin-right: 0px;
+        margin-left: 0;
+        margin-right: 0;
         margin-top: auto;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
@@ -378,8 +378,8 @@ p a {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        padding: 0px 1%;
-        margin-top: 0px;
+        padding: 0 1%;
+        margin-top: 0;
     }
     
     .flexChild {
@@ -389,7 +389,7 @@ p a {
     
     .NoBottomMargin { /*Class for bottom main elements so there is no margin between it and footer*/
         margin-bottom: 0;
-        border-bottom-right-radius: 0px;
+        border-bottom-right-radius: 0;
     }
 
     section.holiday.flexChild {
@@ -400,14 +400,14 @@ p a {
 
     nav ul {
         height: 80px;
-        margin: 0px;
+        margin: 0;
         display: flex;
         flex-direction: row; /*Has all buttons in a row*/
         background-color: #006daa;
     }
 
     nav ul li {
-        margin: 0px;
+        margin: 0;
         display: inline;
         height: auto;
         float: left;
@@ -417,7 +417,7 @@ p a {
     nav ul li a {
         color: #FFFFFF;
         text-align: center;
-        margin: 0px;
+        margin: 0;
         padding: 25px 15px;
         font-size: 26px; /*WAS 18 BUT 26 MAKES HOVER BOXES RIGHT SIZE COULD BE CAUSING ISSUES WITH NAV HEIGHT*/
         background: none;
@@ -435,7 +435,7 @@ p a {
         display: block;
         height:81px;
         width: 81px;
-        padding: 0px;
+        padding: 0;
     }
 
     /*Navbar IDs*/
@@ -453,12 +453,12 @@ p a {
 @media screen and (min-width: 1000px) {
     
     section {
-        margin-right: 0px;
-        margin-top: 0px;
+        margin-right: 0;
+        margin-top: 0;
         margin-bottom: 10px;
     }
     
-    /*Large scren classes*/
+    /*Large screen classes*/
     .desktopFlexParent {
         display: flex; /*Sections that only flex on larger screens*/
         flex-direction: row;
@@ -476,19 +476,18 @@ p a {
     .bottomRightFlex { /*For flexed elements on bottom right of page*/
         margin-left: 10px;
         border-top-left-radius: 10px;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
     }
     
     .desktopNoBottomMargin { /*Class for bottom main elements so there is no margin between it and footer*/
         margin-bottom: 0;
-        border-bottom-right-radius: 0px;
+        border-bottom-right-radius: 0;
     }
 
     /*Large screen IDs*/
     #featuredActivity {
-        border-bottom-left-radius:0px;
-        border-bottom-left-radius:0px; 
+        border-bottom-left-radius:0;
     }
 
 }
