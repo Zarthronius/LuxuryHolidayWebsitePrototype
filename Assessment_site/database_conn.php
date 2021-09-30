@@ -14,4 +14,3 @@ if ($dbConn->connect_error){
     echo "<p>The error was: ".$dbConn->connect_error."</p>\n";
     exit;
     }
-?>
