@@ -49,6 +49,9 @@
                     <p>Visit the View Holidays page for more.</p>
                     <div class="flexParent"> <!--Parent to hold child flexbox sections. Child flexboxes hold basic holiday info from 3 randomly selected holidays.-->
                         <?php
+                        /**
+                         * @var $dbConn mysqli
+                        */
                         include 'database_conn.php'; //make db connection
 
                         $sql = "Select holidayTitle, holidayDescription, holidayDuration, country FROM LCG_holidays\n"
@@ -63,14 +66,14 @@
                             echo "<p>Query failed: ".$dbConn->error."</p>\n</div>\n</section>\n</main>\n</body>\n</html>";
                             exit;
                         }
-                        // Otherwise fetch all the rows returned by the query one by one
+                        // Otherwise, fetch all the rows returned by the query one by one
                         else {
                             while($rowObj = $queryResult->fetch_object()){
                             echo "<section class='holiday flexChild'>\n
-                                  <h3 class='holidayTitle'>{$rowObj->holidayTitle}</h3>\n
+                                  <h3 class='holidayTitle'>$rowObj->holidayTitle</h3>\n
                                   <div class='imgAndDesc'>
-                                  <img class='leftFloatingImage' src=Images/flags/{$rowObj->country}.png alt='An icon of the {$rowObj->country} flag.'>\n 
-                                  <p class='holidayDescription'>{$rowObj->holidayDescription}</p>\n
+                                  <img class='leftFloatingImage' src=Images/flags/$rowObj->country.png alt='An icon of the $rowObj->country flag.'>\n 
+                                  <p class='holidayDescription'>$rowObj->holidayDescription</p>\n
                                   </div>
                                   </section>\n";
                             }
@@ -123,7 +126,7 @@
                 
                 <section class=imgAndDesc>
                     <h3>Mysteries of Zanzibar</h3>
-                    <img class="leftFloatingImage" src="Images/Thumbnails/starfishThumbnail.jpg" alt="Thumbnail image of a red knobbed starfish on sand.">
+                    <img class="leftFloatingImage" src="Images/Thumbnails/starfishThumbnail.jpg" alt="Thumbnail image of a red-knobbed starfish on sand.">
                     <p>Multiple new species of never before seen marine wildlife have been discovered off the coast of Zanzibar island.</p>
                     </section>
             </aside>
