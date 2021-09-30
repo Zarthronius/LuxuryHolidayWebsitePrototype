@@ -51,6 +51,9 @@
                             <!--DYNAMIC CATEGORY DESCRIPTION (RADIO BUTTON)-->
                             <span id=formRadioHeader>Category:</span>               
                             <?php
+                            /**
+                             * @var $dbConn mysqli
+                             */
                                 include 'database_conn.php';
 
                                 //dynamically generated Location list from database
@@ -67,8 +70,8 @@
                                     $accessKey = 1;
                                     while($rowObj = $queryResult->fetch_object()){ // If no error, add new radio button for each category and increment access key
                                         
-                                        echo "<label class='radioLabel' for='{$rowObj->catDesc}'>{$rowObj->catDesc}</label>\n";
-                                        echo "<input type='radio' name='catID' id='{$rowObj->catDesc}' value='{$rowObj->catID}' accesskey='$accessKey' required>";
+                                        echo "<label class='radioLabel' for='$rowObj->catDesc'>$rowObj->catDesc</label>\n";
+                                        echo "<input type='radio' name='catID' id='$rowObj->catDesc' value='$rowObj->catID' accesskey='$accessKey' required>";
                                         
                                         $accessKey += 1;
                                     }
@@ -95,7 +98,7 @@
                             
                                 else { // Dynamically lists options
                                     while($rowObj = $queryResult->fetch_object()){
-                                        echo "<option value='{$rowObj->locationID}'>{$rowObj->locationName}
+                                        echo "<option value='$rowObj->locationID'>$rowObj->locationName
                                         </option>\n";
                                     }
                                 }
