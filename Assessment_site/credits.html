@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Description" content="Credit page citing all externakl images used throughout the website."> <!-- description of the page-->
+        <link href="style.css" rel="stylesheet"> <!--Uses CSS stylesheet for design-->
+        <script src="responsive_menu.js"></script> <!--JScript hamburger menu for low width displays-->
+        <title>Leading Choice Getaways - Credits</title>
+    </head>
+    <body>
+        <div class = "gridContainer"> <!-- creates grid container to contain page-->
+            <header>
+                <h1> <a id="ham_menu">&#9776;</a>Leading Choice Getaways</h1> <!--Menu Icon only visible on narrow screens (e.g. mobile)-->
+            </header>
+
+            <nav>
+                <ul id="main-nav"> <!--Navigation bar links with accessibility features-->
+                <li><a class="navbar-image" href="index.php" accesskey="r"><img id="navIcon" src="Images/Logo.png" alt="Leading Choice Getaways logo, a circle representing an abstract beach view of the horizon."></a></li>
+                <li><a href="index.php" accesskey="h">Home</a></li>
+                <li><a href="holidays.php" accesskey="v">View Holidays</a></li>
+                <li><a href="admin.php" accesskey="a">Admin</a></li>
+                <li><a class = "active" href="credits.html" accesskey="c">Credits</a></li>
+                <li><a href="wireframes.pdf" accesskey="w">Wireframes</a></li>
+                </ul>
+            </nav>
+
+            <main>
+                <section class="topSection">
+                    <h2>Credits</h2>
+                    <h3>Name:</h3><p>Zackary Allen</p> <!--Personal info-->
+                    <h3>Email:</h3><p>zac.allen@northumbria.ac.uk</p>
+                    <h3>ID:</h3><p>W20016567</p>
+                </section>
+                <section>
+                    <h2>Material Sources</h2> <!--Image References-->
+                    <p>Navigation bar logo created by myself.</p>
+                    <h3>Home page images</h3>
+                    <p>Freepik, <i>Icon Pack: Square Country Simple Flags | Square.</i> Available from: <a href="https://www.flaticon.com/packs/square-country-simple-flags">https://www.flaticon.com/packs/square-country-simple-flags</a> (Accessed 06/05/2021)</p>
+                    <p>BlenderTimer, <i>Safari animal image.</i> Available from: <a href="https://pixabay.com/photos/safari-animals-lion-africa-4691832/">https://pixabay.com/photos/safari-animals-lion-africa-4691832</a> (Accessed 07/05/2021)</p>
+                    <p>Simon_sees, <i>Milaidhoo Resort Maldives.</i> Available from: <a href="https://www.flickr.com/photos/39551170@N02/33275626324">https://www.flickr.com/photos/39551170@N02/33275626324</a> (Accessed 07/05/2021)</p>
+                    <p>SusannWeiss, <i>maldives sea beach hut vacations.</i> Available from: <a href="https://pixabay.com/photos/maldives-sea-beach-hut-vacations-1534488/">https://pixabay.com/photos/maldives-sea-beach-hut-vacations-1534488/</a> (Accessed 09/05/2021)</p>
+                    <p>Public Domain Pictures, <i>currencies finance business pounds</i> Available from: <a href="https://pixabay.com/photos/currencies-finance-business-pounds-69522/">https://pixabay.com/photos/currencies-finance-business-pounds-69522/</a> (Accessed 09/05/2021)</p>
+                    <p>OGPictureUpload, <i>mediterranean flag.</i> Available from: <a href="https://commons.wikimedia.org/wiki/File:Mediterranean_flag.png">https://commons.wikimedia.org/wiki/File:Mediterranean_flag.png</a> (Accessed 09/05/2021)</p>
+                    <p>Canon EOS 5D Mark III, <i>starfish.</i>  Available from: <a href="https://www.publicdomainpictures.net/en/view-image.php?image=170571&picture=starfish">https://www.publicdomainpictures.net/en/view-image.php?image=170571&picture=starfish</a> (Accessed 09/05/2021)</p>
+                    <h3>View Holidays image</h3>
+                    <p>George Hodan, <i>Holiday - Background.</i> Available from: <a href="https://www.publicdomainpictures.net/en/view-image.php?image=35551&picture=holiday">https://www.publicdomainpictures.net/en/view-image.php?image=35551&picture=holiday</a> (Accessed 09/05/2021)</p>
+                    
+                </section>
+                <section class="NoBottomMargin">
+                    <h2>Security Considerations</h2>
+                    <p>In the interests of security on this website, there are a few considerations. The Open Web Application Security Project (OWASP) Foundation (2017) have identified the top 10 web application risks. From these 10, one of the most appropriate risks is SQL injection (particularly on the admin submit holiday form). SQL injection allows users to manipulate database tables and records associated with the website either directly by sending SQL queries or perhaps through second-order queries. Second-order queries, in particular, allow the user to insert malicious SQL code within the database. These are then later called to be run by the DBMS through a second query. Another potential issue is security misconfiguration, potentially through misconfigured HTTP headers. These allow users to see sensitive information, which could be exploited (such as the server system) and lets attackers use known exploits easier. Another potential threat identified by Malwarebytes (2017) is homogram (also known as homoglyph) attacks. Homograms are when a malicious party, or "threat actor", will create fake domains with a name almost identical to those of another target domain. However, these false domains will use characters that are indistinguishable from those in the original domains name. The purpose of this is to trick users into opening the malicious site. An example of how this commonly occurs is through the use of Cyrillic letters.</p>
+                    
+                    <p>With all these potential threats in mind a simple, yet effective way to help resolve this would be ensuring all systems are running the latest software patches at all times. Doing so helps ensure that new security patches and optimisations get implemented, making it more difficult for any malicious threat actors to cause damage to the website. In the same vein as this, other key considerations would be limiting HTTP header details to reduce the amount of exploitable information provided to regular users (e.g. which server system is in use). By also protecting the site with HTTPS through certification, giving end to end encryption between users and the server, and as Kayce Basques, web.dev (2020) states, thus preventing third parties from intercepting data packages and passively listening to user website interactions, and provides an additional layer of anonymity to the user. One other essential consideration would be creating prepared statements to sanitise and entries to the form on the admin page, and perhaps even a secure login page with hashed passwords. Doing so allows only essential admin users access to the database. And lastly, the use of prepared statements would also drastically reduce any risks of SQL injection attacks to records saved within the DBMS.</p>
+                    
+                    <h3>Research sources</h3> <!--Security considerations references-->
+                    <p>The Open Web Application Security Project (2017). <i>OWASP Top Ten.</i> Available at: <a href="https://owasp.org/www-project-top-ten/">https://owasp.org/www-project-top-ten/</a> (Accessed: 9 May 2021)</p>
+                    <p>Malwarebytes (2017). <i>Out of character: Homograph attacks explained.</i> Available at: <a href="https://blog.malwarebytes.com/101/2017/10/out-of-character-homograph-attacks-explained/">https://blog.malwarebytes.com/101/2017/10/out-of-character-homograph-attacks-explained/</a> (Accessed: 9 May 2021)</p>
+                    <p>Kayce Basques, web.dev (2020). <i>Why HTTPS matters.</i> Available at: <a href="https://web.dev/why-https-matters/">https://web.dev/why-https-matters/</a> (Accessed: 9 May 2021)</p>
+                </section>
+            </main>
+
+            <aside>
+                <h2>Disclaimer</h2>
+                <p>All images used in the making of this site have been attributed to the relevant creators. All attributed images from externally linked sources are made available for personal use under the creative commons licenses. </p>
+            </aside>            
+
+            <footer>
+                <p>This is a page for a fictional site called Leading Choice Getaways</p>
+            </footer>
+        </div>
+    </body>
+</html>
+
+<!--
+In this page give your own name, id and email address.  Also if you have used source material from anywhere (text, graphics, or anything which is not your own work) you should acknowledge (reference) the source here with enough information for the source to be easily found (e.g. web addresses, book titles and authors, software names and publishers). If you created any of your own graphics you should also state this on your credits page. Note that the Harvard style of referencing should be used – see the Northumbria Skills Plus material provided by the library at https://cragside.northumbria.ac.uk/Everyone/skillsplus/database_uploads/87.pdf
+
+ 
+Security considerations
+Identify any security considerations related to the Leading Choice Getaways web site for both the company and their users and what steps could be taken to minimise any potential security risks.
+
+Add a sub-heading to your credits page called “Security considerations”. Under that heading, in no more than two paragraphs, discuss the security considerations related to the web site and what steps you recommend that they could take to minimise any potential security risks.  Within your discussion you should consider, for example, data protection and privacy, legal issues and any other relevant security matters. You should acknowledge (reference) any sources that you have read to help inform the discussion using the Harvard style of referencing.
+-->

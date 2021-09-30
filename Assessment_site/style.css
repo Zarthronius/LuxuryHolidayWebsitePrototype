@@ -1,0 +1,497 @@
+/* COLOURS */
+
+html {
+    background-color: #003559;
+}
+
+header, footer {
+    background-color: #003559;
+    color: #FFFFFF;
+}
+
+body, nav {
+    background-color: #006daa;
+}
+
+body {
+    color: #000000;
+}
+
+nav ul li a {
+    background: #061A40;
+    color: #FFFFFF;
+}
+
+section, aside {
+    background-color: #FFFFFF;
+}
+
+.flexChild, fieldset, legend { /* For displaying holidays and the admin page fieldsets*/
+    border-color: #061A40;
+    background-color: #B9D6F2;
+    color: #061A40;
+}
+
+/*Button colours*/
+input[type="submit"], button {
+    background-color: #FFC107;
+}
+
+button a {
+    color: #000000;
+}
+
+input[type="submit"]:hover, button:hover { /* For when mouse is over admin form submit button or error page button*/
+    background-color: #0288D1;
+    color: #FFFFFF;
+}
+
+button a:hover {
+    color: #FFFFFF
+}
+
+/*END OF COLOURS*/
+
+/*--------------------------------------------------------------*/
+
+/* HEADER STUFF HERE */
+header {
+    display: inline-block;
+    text-align: left;
+    width:100%;
+}
+
+h1 {
+    padding-left: 5px;
+}
+
+/* END OF HEADER STUFF*/
+
+/*--------------------------------------------------------------*/
+
+/* BURGER MENU NAV*/
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+nav ul li a {
+    display: block;
+    padding: 3px;
+    text-decoration: none;
+    border-style: solid;    
+}
+
+/*Burger menu classes*/
+.navbar-image {
+    display: none;
+}
+
+/*Burger menu IDs*/
+#ham_menu {
+    float: none;
+    padding: 0px 5px;
+    margin-bottom: 5px;
+	display: inline-block;
+}
+
+#main-nav.show {
+	display: block;
+}
+
+
+
+/* BURGER MENU NAV STUFF*/
+/*--------------------------------------------------------------*/
+
+/*STUFF FOR MOBILE AND GENERIC LARGER SIZE*/
+
+body {
+    font-family: sans-serif;
+    margin: 0px;
+}
+
+section {
+    margin: 10px 0px;
+}
+
+aside {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+section, aside {    
+    padding: 5px;
+}
+
+section p, aside p {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+h2, h3 {
+    margin: 10px;
+}
+
+img {
+    display: inline;
+    margin: 10px;
+}
+
+footer {
+    padding: 10px;
+}
+
+footer p{
+    margin: 0px;
+}
+
+section img {
+    float: left;
+}
+
+aside section{
+    border-radius: 0%;
+    border-bottom-style: dashed;
+}
+
+/*Classes*/
+.flexParent {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+}
+
+.flexChild {
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.navbar-image img{
+    margin: 0px;
+}
+
+.blockImg {
+    height: auto;
+    width: 100%;
+    float: none;
+    display: block;
+    margin: 0px;
+    border-radius: 10px;
+}
+
+.leftFloatingImage {
+    height: 128px;
+    width: 128px;
+    margin-top: 0px;
+}
+
+.topSection {
+    margin-top: 0px;
+}
+
+.holidayDescription {
+    margin-top: 0px;
+}
+
+.imgAndDesc { /*Class for flag icons and text*/
+    overflow:hidden; /*allows image to only float with description and force other elements on newline.*/
+}
+
+/* ADMIN INPUT FIELDS */
+
+form {
+    text-align: center;
+}
+
+fieldset {
+    font-size: 20px;
+    border-radius: 10px;
+    margin: 15px 0px;
+    box-sizing: border-box; /*Allows max width to be the same as submit button (accounts for padding/border)*/
+    min-width: auto;
+}
+
+legend {
+    border-style: solid;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    border-radius: 10px;
+}
+
+input, label, textarea, select {
+    padding: 2px 2px;
+    margin: 8px 0;
+}
+
+input[type='radio'] {
+    width: auto;
+}
+
+textarea {
+    resize: none;
+}
+
+fieldset, input[type="submit"] {
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+label, span {
+    grid-column: 1/2;
+    text-align: right;
+}
+
+input {
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+input, select {
+    grid-column: 2/3;
+}
+
+input[name="catID"] {
+    margin: 5px 0px;
+}
+
+input[type="submit"] {
+    margin: 10px 0px;
+    padding: 10px 0px;
+    font-weight: bold;
+}
+
+/*ADMIN PAGE CLASSES*/
+
+.formGrid {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 110px 1fr;
+    grid-column-gap: 10px;
+}
+
+.radioLabel {
+    padding: 0px;
+    margin: 0px;
+}
+
+.radioRow {
+    display: block;
+}
+
+/*ADMIN PAGE IDs*/
+
+#formRadioHeader {
+    margin-top: 10px;
+}
+
+/*END OF ADMIN INPUT FIELDS*/
+
+/*Error Page Button*/
+
+button {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px
+}
+
+button a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*Credits page links*/
+
+p a {
+    text-decoration: none;
+    font-weight: bold;
+} 
+
+/*END OF MOBILE AND GENERIC LARGER SIZE STUFF*/
+
+/*--------------------------------------------------------------*/
+/* TABLET SIZE STUFF HERE */
+@media screen and (min-width: 768px) { /*Creates grid for use at wider display resolutions*/
+    .gridContainer {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 75% 25%;
+
+        grid-template-areas: 
+            "header header"
+            "nav nav"
+            "main aside"
+            "footer footer";
+        }
+    
+    #ham_menu { /*Hides hamburger menu on higher width displays*/
+        display: none;
+    }
+      
+    header {
+        padding-left: 10px;
+        grid-area: header;
+        width: auto;
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    body {
+        margin: 0%;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    aside {
+        grid-area: aside;
+        padding: 5px;
+        margin: 0px 0px 0px 10px;
+        border-top-left-radius: 10px;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+    
+    section {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: auto;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    
+    .flexParent {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0px 1%;
+        margin-top: 0px;
+    }
+    
+    .flexChild {
+        flex: 1 0 30%; /*Shows holidays as 3 in a row - do `flex: 1 0 42%;` for 2 in a row*/
+        margin: 10px;
+    }
+    
+    .NoBottomMargin { /*Class for bottom main elements so there is no margin between it and footer*/
+        margin-bottom: 0;
+        border-bottom-right-radius: 0px;
+    }
+
+    section.holiday.flexChild {
+        max-width: 44%;
+    }
+
+    /* NAV BAR STUFF HERE */
+
+    nav ul {
+        height: 80px;
+        margin: 0px;
+        display: flex;
+        flex-direction: row; /*Has all buttons in a row*/
+        background-color: #006daa;
+    }
+
+    nav ul li {
+        margin: 0px;
+        display: inline;
+        height: auto;
+        float: left;
+        
+    }
+
+    nav ul li a {
+        color: #FFFFFF;
+        text-align: center;
+        margin: 0px;
+        padding: 25px 15px;
+        font-size: 26px; /*WAS 18 BUT 26 MAKES HOVER BOXES RIGHT SIZE COULD BE CAUSING ISSUES WITH NAV HEIGHT*/
+        background: none;
+        height:inherit;
+        border-style: none;       
+    }
+
+    nav ul li a:hover, .active { /*Active nav page and hovered nav buttons will be highlighted*/
+        color: #FFC107;
+    }
+
+    /*Navbar classes*/
+
+    .navbar-image {
+        display: block;
+        height:81px;
+        width: 81px;
+        padding: 0px;
+    }
+
+    /*Navbar IDs*/
+
+    #navIcon {
+        height: 80px;
+    }
+    /* END OF NAV BAR STUFF*/
+}
+/* END OF TABLET SIZE STUFF */
+
+/*--------------------------------------------------------------*/
+/* DESKTOP WINDOW SIZE STUFF HERE */
+
+@media screen and (min-width: 1000px) {
+    
+    section {
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    
+    /*Large scren classes*/
+    .desktopFlexParent {
+        display: flex; /*Sections that only flex on larger screens*/
+        flex-direction: row;
+    }
+    
+    .desktopFlexChild { /*Flex children will take up 50% of space at largest resolutions*/
+        width: 50%;
+    }
+    
+    .rightFlex {
+        margin-left: 10px;
+        border-radius: 10px;
+    }
+    
+    .bottomRightFlex { /*For flexed elements on bottom right of page*/
+        margin-left: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    
+    .desktopNoBottomMargin { /*Class for bottom main elements so there is no margin between it and footer*/
+        margin-bottom: 0;
+        border-bottom-right-radius: 0px;
+    }
+
+    /*Large screen IDs*/
+    #featuredActivity {
+        border-bottom-left-radius:0px;
+        border-bottom-left-radius:0px; 
+    }
+
+}
+/* END OF  DESKTOP WINDOW SIZE STUFF HERE */
+
+/*--------------------------------------------------------------*/

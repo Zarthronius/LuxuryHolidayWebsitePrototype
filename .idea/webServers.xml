@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5ca3c62e-8967-4ba6-8632-94432e2592b3" name="Newnumyspace (project level)" url="http://unn-w20016567.newnumyspace.co.uk">
+        <fileTransfer rootFolder="/home/unn_w20016567" accessType="SFTP" host="newnumyspace.co.uk" port="22" sshConfigId="ee0bc30d-8100-4820-ab35-9f2ef4f0b80a" sshConfig="unn_w20016567@newnumyspace.co.uk:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
