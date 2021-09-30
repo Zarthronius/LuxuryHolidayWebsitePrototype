@@ -30,6 +30,9 @@
                     <h2>All Holidays</h2>
                         <div class="flexParent"> <!-- flex div-->
                         <?php
+                        /**
+                         * @var $dbConn mysqli
+                         */
                             include 'database_conn.php'; // Make db connection
 
                             $sql = "SELECT holidayTitle, holidayDescription, holidayDuration, holidayPrice, catDesc, locationName, country FROM LCG_holidays\n"
@@ -44,21 +47,21 @@
                                 echo "<p>Query failed: ".$dbConn->error."</p>\n</div>\n</section>\n</main>\n</body>\n</html>"; 
                                 exit;
                             }
-                            // Otherwise fetch all the rows returned by the query one by one
+                            // Otherwise, fetch all the rows returned by the query one by one
                             else {
                                 while($rowObj = $queryResult->fetch_object()){ // 
                                 $costPerDay = number_format((($rowObj->holidayPrice)/($rowObj->holidayDuration)), 2); //Calculates cost per day by doing holidayPrice/holidayDuration and formats to 2 decimal places
                                 echo "<section class='holiday flexChild'>\n
-                                      <h3 class='holidayTitle'>{$rowObj->holidayTitle}</h3>\n
+                                      <h3 class='holidayTitle'>$rowObj->holidayTitle</h3>\n
                                       <div class='imgAndDesc'>\n
-                                      <img class='leftFloatingImage' src=Images/flags/{$rowObj->country}.png alt='An icon of the {$rowObj->country} flag.'>\n 
-                                      <p class='holidayDescription'>{$rowObj->holidayDescription}</p>\n
+                                      <img class='leftFloatingImage' src=Images/flags/$rowObj->country.png alt='An icon of the $rowObj->country flag.'>\n 
+                                      <p class='holidayDescription'>$rowObj->holidayDescription</p>\n
                                       </div>\n
-                                      <p class='holidayDuration'><b>Duration:</b> {$rowObj->holidayDuration} Days</p>\n
-                                      <p class='holidayPrice'><b>Price:</b> £{$rowObj->holidayPrice}</p>\n
-                                      <p class='costPerDay'><b>Cost per day:</b> £{$costPerDay}</p>\n
-                                      <p class='catDesc'><b>Category:</b> {$rowObj->catDesc}</p>\n
-                                      <p class='locationName'><b>Location:</b> {$rowObj->locationName}, {$rowObj->country}</p>\n
+                                      <p class='holidayDuration'><b>Duration:</b> $rowObj->holidayDuration Days</p>\n
+                                      <p class='holidayPrice'><b>Price:</b> £$rowObj->holidayPrice</p>\n
+                                      <p class='costPerDay'><b>Cost per day:</b> £$costPerDay</p>\n
+                                      <p class='catDesc'><b>Category:</b> $rowObj->catDesc</p>\n
+                                      <p class='locationName'><b>Location:</b> $rowObj->locationName, $rowObj->country</p>\n
                                       </section>\n"; //Displays all content for each holiday and
                                 }
                             }
